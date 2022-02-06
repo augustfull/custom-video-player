@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom HTML video player</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <video
+        width="480"
+        height="320"
+        preload="auto"
+        poster="/assets/media/video-poster.jpg"
+      >
+        <source src="/assets/media/652333414.mp4" type="video/mp4" />
+        Sorry your browser doesn't support HTML video, please update your
+        browser to latest version
+      </video>
+      <div class="controls">
+        <div class="progress-bar">
+          <div class="progress-bar__fill"></div>
+        </div>
+        <button class="play-button toggle">&#9654;</button>
+        <button class="play-button center">&#9654;</button>
+        <!-- &#9208; pause emoji code -->
+        <input
+          type="range"
+          name="volume"
+          min="0"
+          max="1"
+          step="0.05"
+          value="1"
+          class="volume"
+        />
+        <input
+          type="range"
+          name="playback_speed"
+          min="0.5"
+          max="2"
+          step="0.25"
+          value="1"
+          class="playback"
+        />
+        <div class="skip-backward" data-skip="-15">&larr; 15s</div>
+        <div class="skip-forward" data-skip="15">&rarr; 15s</div>
+      </div>
+    </div>
+  </body>
+</html>
