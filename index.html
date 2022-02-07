@@ -9,39 +9,44 @@
   </head>
   <body>
     <div class="wrapper">
-      <video preload="auto" poster="/assets/media/video-poster.jpg">
-        <source src="/assets/media/652333414.mp4" type="video/mp4" />
-        Sorry your browser doesn't support HTML video, please update your
-        browser to latest version
+      <video preload="metadata" poster="/assets/media/video-poster.jpg">
+        <source src="/assets/media/652333414.mp4" />
       </video>
-      <div class="progress-bar">
-        <div class="progress-bar__fill"></div>
-      </div>
-      <button class="play-button center">&#9654;</button>
+
       <div class="controls">
-        <button class="play-button toggle">&#9654;</button>
-        <!-- &#9208; pause emoji code -->
-        <input
-          type="range"
-          name="volume"
-          min="0"
-          max="1"
-          step="0.05"
-          value="1"
-          class="volume"
-        />
-        <input
-          type="range"
-          name="playback_speed"
-          min="0.5"
-          max="2"
-          step="0.25"
-          value="1"
-          class="playback"
-        />
-        <div class="skip-backward" data-skip="-15">&larr; 15s</div>
-        <div class="skip-forward" data-skip="15">&rarr; 15s</div>
+        <div class="progress-bar">
+          <div class="progress-bar__fill"></div>
+        </div>
+        <div class="inner-controls">
+          <button class="play-button toggle">&#9654;</button>
+          <input
+            type="range"
+            name="volume"
+            min="0"
+            max="1"
+            step="0.05"
+            value="1"
+            class="slider"
+          />
+          <input
+            type="range"
+            name="playbackRate"
+            min="0.5"
+            max="2"
+            step="0.25"
+            value="1"
+            class="slider"
+          />
+          <div class="skip-backward" data-skip="-15" title="skip backward">
+            &larr; 15s
+          </div>
+          <div class="skip-forward" data-skip="15" title="skip forward">
+            &rarr; 15s
+          </div>
+        </div>
       </div>
     </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
